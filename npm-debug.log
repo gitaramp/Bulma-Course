@@ -1,0 +1,130 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\ProgramData\\chocolatey\\lib\\npm\\tools\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'gulp@3.3.4',
+1 verbose cli   '-g' ]
+2 info using npm@1.4.9
+3 info using node@v11.9.0
+4 verbose cache add [ 'gulp@3.3.4', null ]
+5 verbose cache add name=undefined spec="gulp@3.3.4" args=["gulp@3.3.4",null]
+6 verbose parsed url Url {
+6 verbose parsed url   protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'gulp@3.3.4',
+6 verbose parsed url   path: 'gulp@3.3.4',
+6 verbose parsed url   href: 'gulp@3.3.4' }
+7 verbose cache add name="gulp" spec="3.3.4" args=["gulp","3.3.4"]
+8 verbose parsed url Url {
+8 verbose parsed url   protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: '3.3.4',
+8 verbose parsed url   path: '3.3.4',
+8 verbose parsed url   href: '3.3.4' }
+9 verbose addNamed [ 'gulp', '3.3.4' ]
+10 verbose addNamed [ '3.3.4', '3.3.4' ]
+11 silly lockFile b0ca5284-gulp-3-3-4 gulp@3.3.4
+12 verbose lock gulp@3.3.4 C:\Users\Michał\AppData\Roaming\npm-cache\b0ca5284-gulp-3-3-4.lock
+13 verbose registry.get gulp not expired, no request
+14 silly lockFile b0ca5284-gulp-3-3-4 gulp@3.3.4
+15 silly lockFile b0ca5284-gulp-3-3-4 gulp@3.3.4
+16 silly resolved [ { name: 'gulp',
+16 silly resolved     description: 'The streaming build system',
+16 silly resolved     version: '3.3.4',
+16 silly resolved     homepage: 'http://github.com/wearefractal/gulp',
+16 silly resolved     repository:
+16 silly resolved      { type: 'git', url: 'git://github.com/wearefractal/gulp.git' },
+16 silly resolved     author:
+16 silly resolved      { name: 'Fractal',
+16 silly resolved        email: 'contact@wearefractal.com',
+16 silly resolved        url: 'http://wearefractal.com/' },
+16 silly resolved     main: './index.js',
+16 silly resolved     tags: [ 'build', 'stream', 'system' ],
+16 silly resolved     bin: { gulp: './bin/gulp.js' },
+16 silly resolved     dependencies:
+16 silly resolved      { 'glob-stream': '~3.1.2',
+16 silly resolved        mkdirp: '~0.3.5',
+16 silly resolved        optimist: '~0.6.0',
+16 silly resolved        'gulp-util': '~2.2.0',
+16 silly resolved        orchestrator: '~0.3.0',
+16 silly resolved        resolve: '~0.6.1',
+16 silly resolved        'findup-sync': '~0.1.2',
+16 silly resolved        'pretty-hrtime': '~0.2.0',
+16 silly resolved        'glob-watcher': '~0.0.1',
+16 silly resolved        'graceful-fs': '~2.0.1',
+16 silly resolved        through: '~2.3.4',
+16 silly resolved        'map-stream': '~0.1.0',
+16 silly resolved        semver: '~2.2.1' },
+16 silly resolved     devDependencies:
+16 silly resolved      { mocha: '~1.17.0',
+16 silly resolved        'mocha-lcov-reporter': '0.0.1',
+16 silly resolved        coveralls: '~2.6.1',
+16 silly resolved        istanbul: '~0.2.3',
+16 silly resolved        should: '~2.1.1',
+16 silly resolved        rimraf: '~2.2.5',
+16 silly resolved        q: '~1.0.0',
+16 silly resolved        jshint: '~2.4.1' },
+16 silly resolved     scripts:
+16 silly resolved      { test: 'mocha --reporter spec && jshint',
+16 silly resolved        coveralls:
+16 silly resolved         'istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | coveralls && rm -rf ./coverage' },
+16 silly resolved     engines: { node: '>= 0.9' },
+16 silly resolved     licenses: [ [Object] ],
+16 silly resolved     readme:
+16 silly resolved      '<p align="center">\n  <a href="http://gulpjs.com">\n    <img height="194" width="98" src="https://raw.github.com/gulpjs/artwork/master/gulp.png"/>\n  </a>\n  <br/>\n  <a href="http://gulpjs.com/">Visit our website!</a>\n</p>\n\n# gulp [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Dependency Status](https://david-dm.org/gulpjs/gulp.png?theme=shields.io)](https://david-dm.org/gulpjs/gulp)\n> The streaming build system\n\n## Documentation\n\nFor a Getting started guide, API docs, recipes, making a plugin, etc. see the [documentation page](/docs/README.md)!\n\n## Sample gulpfile\n\nThis file is just a quick sample to give you a taste of what gulp does.\n\n```javascript\nvar gulp = require(\'gulp\');\nvar uglify = require(\'gulp-uglify\');\nvar imagemin = require(\'gulp-imagemin\');\n\ngulp.task(\'scripts\', function() {\n  // Minify and copy all JavaScript (except vendor scripts)\n  return gulp.src([\'client/js/**/*.js\', \'!client/js/vendor/**\'])\n    .pipe(uglify())\n    .pipe(gulp.dest(\'build/js\'));\n});\n\n// Copy all static images\ngulp.task(\'images\', function() {\n return gulp.src(\'client/img/**\')\n    // Pass in options to the task\n    .pipe(imagemin({optimizationLevel: 5}))\n    .pipe(gulp.dest(\'build/img\'));\n});\n\n// The default task (called when you run `gulp`)\ngulp.task(\'default\', function() {\n  gulp.run(\'scripts\', \'images\');\n\n  // Watch files and run tasks if they change\n  gulp.watch(\'client/js/**\', function() {\n    gulp.run(\'scripts\');\n  });\n\n  gulp.watch(\'client/img/**\', function() {\n    gulp.run(\'images\');\n  });\n});\n```\n\n\n## gulp CLI\n\n### Tasks\n\nTasks can be executed by running `gulp <task> <othertask>`. Just running `gulp` will execute the task you registered called `default`. If there is no `default` task gulp will error.\n\n### Compilers\n\nYou can use any language you want for your gulpfile. You will have to specify the language module name so the CLI can load it (and its associated extensions) before attempting to find your gulpfile. Make sure you have this module installed accessible by the folder you are running the CLI in.\n\nExample:\n\n```\ngulp dosomething --require coffee-script\n```\n\n\n[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/wearefractal/gulp/trend.png)](https://bitdeli.com/free "Bitdeli Badge")\n\n[npm-url]: https://npmjs.org/package/gulp\n[npm-image]: https://badge.fury.io/js/gulp.png\n[travis-url]: https://travis-ci.org/gulpjs/gulp\n[travis-image]: https://travis-ci.org/gulpjs/gulp.png?branch=master\n[coveralls-url]: https://coveralls.io/r/gulpjs/gulp\n[coveralls-image]: https://coveralls.io/repos/gulpjs/gulp/badge.png\n[depstat-url]: https://david-dm.org/gulpjs/gulp\n[depstat-image]: https://david-dm.org/gulpjs/gulp.png\n',
+16 silly resolved     readmeFilename: 'README.md',
+16 silly resolved     bugs: { url: 'https://github.com/wearefractal/gulp/issues' },
+16 silly resolved     _id: 'gulp@3.3.4',
+16 silly resolved     _shasum: '826f514bf6235d632464b8f1f0e7de19ed07e162',
+16 silly resolved     _from: 'gulp@3.3.4',
+16 silly resolved     _resolved: 'https://registry.npmjs.org/gulp/-/gulp-3.3.4.tgz' } ]
+17 info install gulp@3.3.4 into C:\Program Files\nodejs
+18 info installOne gulp@3.3.4
+19 info C:\Program Files\nodejs\node_modules\gulp unbuild
+20 info preuninstall gulp@4.0.0
+21 info uninstall gulp@4.0.0
+22 verbose true,C:\Program Files\nodejs\node_modules,C:\Program Files\nodejs\node_modules unbuild gulp@4.0.0
+23 verbose C:\Program Files\nodejs,[object Object] binRoot
+24 info C:\Program Files\nodejs\node_modules\gulp unbuild
+25 info preuninstall gulp@4.0.0
+26 info uninstall gulp@4.0.0
+27 verbose true,C:\Program Files\nodejs\node_modules,C:\Program Files\nodejs\node_modules unbuild gulp@4.0.0
+28 verbose C:\Program Files\nodejs,[object Object] binRoot
+29 error error rolling back Error: EPERM: operation not permitted, unlink 'C:\Program Files\nodejs\gulp.cmd'
+29 error error rolling back  gulp@3.3.4 { [Error: EPERM: operation not permitted, unlink 'C:\Program Files\nodejs\gulp.cmd']
+29 error error rolling back   errno: -4048,
+29 error error rolling back   code: 'EPERM',
+29 error error rolling back   syscall: 'unlink',
+29 error error rolling back   path: 'C:\\Program Files\\nodejs\\gulp.cmd' }
+30 error Error: EPERM: operation not permitted, unlink 'C:\Program Files\nodejs\gulp.cmd'
+30 error  { [Error: EPERM: operation not permitted, unlink 'C:\Program Files\nodejs\gulp.cmd']
+30 error   errno: -4048,
+30 error   code: 'EPERM',
+30 error   syscall: 'unlink',
+30 error   path: 'C:\\Program Files\\nodejs\\gulp.cmd' }
+31 error Please try running this command again as root/Administrator.
+32 error System Windows_NT 10.0.16299
+33 error command "C:\\Program Files\\nodejs\\node.exe" "C:\\ProgramData\\chocolatey\\lib\\npm\\tools\\node_modules\\npm\\bin\\npm-cli.js" "install" "gulp@3.3.4" "-g"
+34 error cwd G:\Bulma
+35 error node -v v11.9.0
+36 error npm -v 1.4.9
+37 error path C:\Program Files\nodejs\gulp.cmd
+38 error syscall unlink
+39 error code EPERM
+40 error errno -4048
+41 error stack Error: EPERM: operation not permitted, unlink 'C:\Program Files\nodejs\gulp.cmd'
+42 verbose exit [ -4048, true ]

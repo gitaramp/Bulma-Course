@@ -1,0 +1,22 @@
+{
+  "name": "Bulma",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "bulma": "^0.7.2",
+    "gulp": "^3.3.4",
+    "gulp-sass": "^4.0.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2"
+  }
+}
